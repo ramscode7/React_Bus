@@ -20,29 +20,39 @@ function Form() {
 
   const addData = (e) => {
     e.preventDefault();
-    const { name, email, password } = userreg;
-    if (name === "") {
-      toast.error("Name is required ❌", {
-        position: "top-right",
-      });
-    } else if (email.trim === "") {
-      toast.error("Email is required ❌", { position: "top-right" });
-    } else if (!email.includes("@")) {
-      toast.error("Please Enter Valid Email ❌", { position: "top-right" });
-    } else if (password === "") {
-      toast.error("Password is required ❌", { position: "top-right" });
-    } else if (password.length < 5) {
-      toast.error("Password is weak ❌", {
-        position: "bottom-right",
-      });
+
+    const matchdata = data.filter((elem) => {
+      return elem.email == email;
+    });
+
+    if (matchdata.length == 0 || matchdata == null) {
+      const { name, email, password } = userreg;
+      if (name === "") {
+        toast.error("Name is required ❌", {
+          position: "top-right",
+        });
+      } else if (email.trim === "") {
+        toast.error("Email is required ❌", { position: "top-right" });
+      } else if (!email.includes("@")) {
+        toast.error("Please Enter Valid Email ❌", { position: "top-right" });
+      } else if (password === "") {
+        toast.error("Password is required ❌", { position: "top-right" });
+      } else if (password.length < 5) {
+        toast.error("Password is weak ❌", {
+          position: "bottom-right",
+        });
+      } else {
+        toast.success("Successfully Registered 😀", { position: "top-right" });
+        data.push(userreg);
+        localStorage.setItem("userdata", JSON.stringify(data));
+        setname("");
+        setemail("");
+        setpassword("");
+      }
     } else {
-      toast.success("Successfully Registered 😀", { position: "top-right" });
-      data.push(userreg);
-      localStorage.setItem("userdata", JSON.stringify(data));
-      setname("");
-      setemail("");
-      setpassword("");
+      toast.error("user already Exist");
     }
+
     // console.log(userreg);
   };
 

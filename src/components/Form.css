@@ -1,0 +1,87 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  font-family: "Lato", sans-serif;
+  font-family: "Pacifico", cursive;
+  letter-spacing: 1px;
+  word-spacing: 2px;
+}
+
+.reg_body {
+  background-image: url("../login-image.svg");
+  background-size: contain;
+  background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.reg {
+  text-align: center;
+  color: rgb(216, 39, 39);
+  top: 8%;
+  left: 11%;
+  position: absolute;
+  font-size: 50px;
+}
+.Form1 {
+  top: 40%;
+  left: 25%;
+  border-style: solid;
+  padding: 60px;
+  width: 550px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  border: none;
+  border-radius: 15px;
+  height: 18rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 35px;
+}
+.Form1-label {
+  font-size: 18px;
+}
+
+.Form1-input {
+  height: 35px;
+  border-radius: 5px;
+  padding: 8px;
+  margin: 5px;
+  font-size: 15px;
+  background: transparent;
+  border: none;
+  border-bottom: 3px solid rgb(108, 108, 108);
+}
+.Form1-btn {
+  font-size: 16px;
+  padding: 5px;
+  width: 7rem;
+  border-radius: 5px;
+  margin-top: 15px;
+  height: 50px;
+  background-color: rgb(251, 129, 129);
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+}
+.Form1-btn:hover {
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+.Form1-btn:active {
+  transform: scale(0.9);
+  background-color: rgb(246, 171, 158);
+}
+.para {
+  margin-top: 10px;
+  text-align: end;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.logout_text1 {
+  color: rgb(255, 13, 0);
+  text-decoration: none;
+  text-shadow: 1px 1px rgb(116, 115, 115);
+}
+.logout_text1:hover {
+  transform: translateY(-3px);
+}
